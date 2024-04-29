@@ -31,26 +31,26 @@
       <!-- Daftar menu untuk tampilan desktop -->
       <div class="hidden md:flex items-center space-x-4">
         <!-- Search Bar -->
-        <div class="md:flex items-center bg-white rounded-md text-sm">
+        <div class="md:flex items-center bg-white rounded-sm text-sm">
           <input
             type="search"
             class="px-4 py-2 md:w-36 lg:w-full xl:w-full ml-5"
             placeholder="Search..." />
-          <button class="px-4 py-2 text-white bg-slate-900 rounded-md">
+          <button class="px-4 py-2 text-white bg-slate-900 rounded-sm">
             <i class="fas fa-search"></i>
           </button>
         </div>
         <!-- Cart Icon -->
         <router-link
           :to="{ name: 'cart' }"
-          class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-md text-sm">
+          class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-sm text-sm">
           <i class="fas fa-shopping-cart mr-2"></i> Cart
         </router-link>
         <!-- Profile Info and Logout Button -->
         <template v-if="isAuthenticated">
           <button
             @click="logout"
-            class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-md text-sm">
+            class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-sm text-sm">
             <i class="fas fa-sign-out-alt mr-2"></i>
             Logout
           </button>
@@ -67,7 +67,7 @@
           <!-- Login Button -->
           <button
             @click="login"
-            class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-md text-sm">
+            class="hover:text-gray-300 bg-slate-900 text-white p-2 rounded-sm text-sm">
             <i class="fas fa-sign-out-alt mr-2"></i> Login
           </button>
         </template>
@@ -81,7 +81,7 @@
       <div class="px-4 py-2">
         <input type="search" class="px-4 py-2 w-full" placeholder="Search..." />
         <button
-          class="px-4 py-2 text-white bg-slate-900 rounded-md mt-2 w-full">
+          class="px-4 py-2 text-white bg-slate-900 rounded-sm mt-2 w-full">
           Search
         </button>
       </div>

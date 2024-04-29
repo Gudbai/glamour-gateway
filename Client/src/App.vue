@@ -8,4 +8,12 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+/* body {
+  background: linear-gradient(
+    to bottom,
+    #fff,
+    #000
+  ); 
+} */
+</style>

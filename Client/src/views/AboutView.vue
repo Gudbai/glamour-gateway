@@ -106,21 +106,21 @@
       <div
         class="grid grid-cols-2 sm:grid-cols- md:grid-cols-2 gap-2 w-full md:w-1/2 bg-cover animate__animated animate__fadeInRight">
         <img
-          src="../assets/photo-1610844228349-76b56e6ac462.jpeg"
+          src="../assets/rosa-rafael.jpg"
           alt=""
-          class="rounded-lg" />
+          class="rounded-lg w-80 h-48" />
         <img
           src="../assets/photo-1610844228349-76b56e6ac462.jpeg"
           alt=""
-          class="rounded-lg" />
+          class="rounded-lg w-80 h-48" />
         <img
           src="../assets/photo-1610844228349-76b56e6ac462.jpeg"
           alt=""
-          class="rounded-lg" />
+          class="rounded-lg w-80 h-48" />
         <img
-          src="../assets/photo-1610844228349-76b56e6ac462.jpeg"
+          src="../assets/rosa-rafael.jpg"
           alt=""
-          class="rounded-lg" />
+          class="rounded-lg w-80 h-48" />
       </div>
     </div>
 

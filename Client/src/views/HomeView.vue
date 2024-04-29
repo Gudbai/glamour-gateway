@@ -1,54 +1,58 @@
 <template>
-  <div class="font-quicksand max-h-screen">
+  <div class="max-h-screen">
     <NavbarHome
       class="animate__animated animate__fadeInDown animate__delay-1s" />
 
-    <div class="flex flex-col lg:flex-row xl:flex-row">
-      <transition name="custom" class="animate__animated animate__fadeInLeft">
-        <div
-          class="text-center tracking-widest font-switzer lg:text-left lg:ml-20 lg:text-7xl lg:w-1/2 xl:text-left xl:ml-20 xl:text-9xl xl:w-1/2">
+    <div class="flex flex-col lg:flex-row items-center justify-center py-10">
+      <!-- Bagian teks di kiri -->
+      <div class="lg:w-1/2 xl:w-1/2 text-center lg:text-left">
+        <!-- Transisi dan teks "Transcend" -->
+        <transition name="custom" class="animate__animated animate__fadeInLeft">
+          <h1
+            class="text-2xl mx-5 mb-3 mt-5 sm:text-3xl lg:mx-20 lg:text-3xl xl:text-3xl tracking-widest font-quicksand">
+            Transcend the boundaries of elegance with
+          </h1>
+        </transition>
+
+        <!-- Transisi dan teks "GLAMOUR GATEWAY" -->
+        <transition
+          name="custom"
+          class="animate__animated animate__fadeInUp animate__delay-1s">
+          <h2
+            class="mx-20 mt-2 mb-3 font-semibold text-3xl tracking-widest sm:text-3xl md:text-4xl lg:mx-20 lg:text-4xl xl:text-4xl">
+            GLAMOUR GATEWAY
+          </h2>
+        </transition>
+
+        <!-- Teks deskriptif -->
+        <div class="animate__animated animate__fadeInUp animate__delay-1s">
           <p
-            class="text-2xl mx-5 mb-2 mt-5 font-quicksand sm:text-2xl md:text-3xl lg:text-3xl lg:mx-0 lg:mb-10 lg:mt-10 xl:text-3xl xl:mx-0 xl:mb-10 xl:mt-10">
-            Transcend the limits of elegance with
+            class="mx-5 mt-2 mb-10 text-lg lg:text-lg lg:mx-20 xl:text-lg tracking-normal font-quicksand">
+            Experience the magic of a radiant and youthful complexion
           </p>
+
+          <!-- Tombol Shop Now -->
+          <a
+            href="#learn-more"
+            class="mt-4 ml-5 mr-2 lg:ml-20 bg-slate-800 text-white py-2 px-4 rounded-sm hover:bg-slate-900 transition duration-300">
+            Learn More
+          </a>
+          <a
+            href="#learn-more"
+            class="mt-4 mr-5 lg:mr-20 bg-slate-800 text-white py-2 px-4 rounded-sm hover:bg-slate-900 transition duration-300">
+            Shop Now
+          </a>
         </div>
-      </transition>
+      </div>
+
+      <!-- Bagian gambar di kanan -->
 
       <transition name="custom" class="animate__animated animate__slideInDown">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 mx-5 sm:mx-10 mt-7 gap-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-5 lg:mr-24 lg:mt-0 xl:grid-cols-4 xl:gap-5 xl:mr-20 xl:mt-0">
-          <div
-            v-for="(photo, index) in photos"
-            :key="index"
-            class="flex justify-center lg:justify-start xl:justify-start">
-            <img
-              :src="require(`@/assets/${photo}`)"
-              :class="{
-                'lg:block xl:block w-full h-24 sm:h-48 md:h-48 lg:w-36 lg:h-96 xl:w-36 xl:h-96 object-cover shadow-sm':
-                  index % 2 === 1,
-                'lg:block xl:block w-full h-24 sm:h-48 md:h-48 lg:w-36 lg:h-80 xl:w-36 xl:h-80 object-cover shadow-sm':
-                  index % 2 === 0,
-              }" />
-          </div>
+        <div class="mt-7 lg:w-[55%] h-full">
+          <img src="../assets/monochrome-heroImage.png" alt="Hero Image" />
         </div>
       </transition>
     </div>
-    <transition
-      name="custom"
-      class="animate__animated animate__fadeInUp animate__delay-1s">
-      <p
-        class="ml-5 mt-10 text-5xl tracking-widest font-switzer sm:ml-10 sm:text-6xl md:ml-20 md:text-7xl lg:ml-20 lg:text-8xl xl:ml-20 xl:text-9xl">
-        GLAMOUR
-      </p>
-    </transition>
-    <transition
-      name="custom"
-      class="animate__animated animate__fadeInUp animate__delay-1s">
-      <p
-        class="mr-5 text-5xl tracking-widest font-switzer sm:mr-10 sm:text-6xl md:mr-20 md:text-7xl lg:mr-20 lg:text-8xl xl:mr-20 xl:text-9xl text-right">
-        * GATEWAY
-      </p>
-    </transition>
 
     <!-- Promotional Offers Section -->
     <div class="mt-20 mx-10 sm:mx-10 md:mx-10 lg:mx-20 py-12">
@@ -192,176 +196,173 @@
       </div>
     </div>
 
-    <!-- Testimonial Section -->
     <div class="mt-20 bg-slate-800 py-12">
       <div class="container mx-auto px-4">
         <h2
           class="text-3xl tracking-widest font-switzer text-left mb-8 text-white">
-          * Testimonials
+          Testimonials
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <!-- Testimonial 1 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "The product is amazing! It made my skin glow and feel so soft."
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=1"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Anna Williams</p>
+                <p class="text-gray-600">Beauty Enthusiast</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 2 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "I've never felt more confident in my skin. This product is a
+              game-changer."
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=2"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Michael Lee</p>
+                <p class="text-gray-600">Entrepreneur</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 3 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "I can see a significant difference in my skin tone and texture.
+              Highly recommend it!"
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=3"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Sophia Gomez</p>
+                <p class="text-gray-600">Professional Photographer</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 4 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "A must-have product! It made my skin look so vibrant and
+              healthy."
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=4"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">James Anderson</p>
+                <p class="text-gray-600">Marketing Executive</p>
               </div>
             </div>
           </div>
-          <!-- Testimonial 4 -->
+
+          <!-- Testimonial 5 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "I've tried many products, but this one stands out. It's simply
+              amazing!"
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=5"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Emma Thompson</p>
+                <p class="text-gray-600">Writer</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 6 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "My skin feels refreshed and rejuvenated after using this product.
+              Highly recommended!"
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=6"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Olivia Carter</p>
+                <p class="text-gray-600">Makeup Artist</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 7 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "This product transformed my skincare routine! I can't go a day
+              without it now."
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=7"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Lucas Martin</p>
+                <p class="text-gray-600">Fashion Blogger</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 8 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "I love how this product makes my skin look and feel. Absolutely
+              recommend it!"
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=8"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Grace Park</p>
+                <p class="text-gray-600">Software Engineer</p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 9 -->
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Testimonial content goes here -->
             <p class="text-gray-800 text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "This product has transformed my skincare routine! My skin has
+              never looked better."
             </p>
             <div class="flex items-center mt-4">
               <img
                 class="h-10 w-10 rounded-full mr-4"
-                src="https://via.placeholder.com/50"
+                src="https://source.unsplash.com/random/50x50?face&sig=9"
                 alt="testimonial" />
               <div>
-                <p class="text-gray-900 font-semibold">John Doe</p>
-                <p class="text-gray-600">CEO, Company Inc.</p>
+                <p class="text-gray-900 font-semibold">Lisa Kim</p>
+                <p class="text-gray-600">Marketing Manager</p>
               </div>
             </div>
           </div>
-          <!-- End Testimonial -->
         </div>
       </div>
     </div>
@@ -418,35 +419,29 @@ export default {
   },
   data() {
     return {
-      photos: [
-        "rosa-rafael.jpg",
-        "rosa-rafael.jpg",
-        "rosa-rafael.jpg",
-        "rosa-rafael.jpg",
-      ],
       products: [
         {
           id: 1,
           name: "Product 1",
-          image: "https://via.placeholder.com/300",
+          image: "https://source.unsplash.com/random/300?cosmetic&sig=1",
           price: 1000000,
         },
         {
           id: 2,
           name: "Product 2",
-          image: "https://via.placeholder.com/300",
+          image: "https://source.unsplash.com/random/300?cosmetic&sig=2",
           price: 1500000,
         },
         {
           id: 3,
           name: "Product 3",
-          image: "https://via.placeholder.com/300",
+          image: "https://source.unsplash.com/random/300?cosmetic&sig=3",
           price: 800000,
         },
         {
           id: 4,
           name: "Product 4",
-          image: "https://via.placeholder.com/300",
+          image: "https://source.unsplash.com/random/300?cosmetic&sig=4",
           price: 1200000,
         },
         // Add more products as needed
@@ -480,9 +475,8 @@ export default {
         },
         {
           name: "JNE Express",
-          logo: "https://pkk.uma.ac.id/wp-content/uploads/2023/06/jne2.png",
+          logo: "https://cfstg.alfacart.com/media/revamp/mweb/assets/img/JNE.png",
         },
-        // Tambahan layanan pengiriman lainnya
       ],
     };
   },

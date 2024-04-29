@@ -2,7 +2,7 @@
   <div>
     <div
       @click="goToProductDetail"
-      class="w-full md:w-auto h-auto rounded overflow-hidden shadow-lg transition-all duration-500 hover:scale-110 cursor-pointer">
+      class="w-full md:w-auto h-auto rounded overflow-hidden border-2 shadow-xl transition-all duration-500 hover:scale-110 cursor-pointer">
       <img
         class="w-full h-32 md:h-24 lg:h-64 xl:h-64 object-cover object-center"
         :src="product.img"
