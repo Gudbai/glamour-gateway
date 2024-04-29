@@ -446,7 +446,10 @@ export default {
     getProductDescription(categoryProduct) {
       if (
         categoryProduct &&
-        this.categoryDescriptions.hasOwnProperty(categoryProduct)
+        Object.prototype.hasOwnProperty.call(
+          this.categoryDescriptions,
+          categoryProduct
+        )
       ) {
         return this.categoryDescriptions[categoryProduct];
       } else {
